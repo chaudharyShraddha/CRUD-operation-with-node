@@ -1,0 +1,32 @@
+
+<div class="pade-heading">
+    <h3>{{title}}</h3><hr>
+</div>
+
+
+<form action="/insert" method="POST">
+    <input type="hidden" name="id" value={{data._id}}>
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Full Name" value={{data.name}}>
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" class="form-control" placeholder="Email" value={{data.email}}>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="mobile">Mobile</label>
+            <input type="text" name="mobile" class="form-control" placeholder="Mobile" value={{data.mobile}}>
+         </div>
+         <div class="form-group col-md-6">
+            <label for="city">City</label>
+            <input type="text" name="city" class="form-control" placeholder="City" value={{data.city}}>
+         </div>
+    </div> 
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>&nbsp;
+        <a href="/showData" class="btn btn-secondary"><i class="fa fa-list-alt"></i> View All</a>
+    </div>   
+</form>

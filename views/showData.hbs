@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="pade-heading">
+        <h3><a href="/" class="btn btn-secondary"><i class="fa fa-plus"></i> Create New</a> Employee List</h3>
+    </div>
+</div>
+
+<table class="table table-striped col-md-7">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>City</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/delete/{{this._id}}"><i class="fas fa-trash-alt fa-lg" aria-hidden="true"></i></a>&nbsp;
+                <a href="http://localhost:8888/{{this._id}}"><i class="fas fa-pencil-alt fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+      {{/each}}
+     </tbody>
+</table>
